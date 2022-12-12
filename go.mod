@@ -1,4 +1,4 @@
-module github.com/un3481/sample-metro2-server
+module sample-metro2-server
 
 go 1.19
 

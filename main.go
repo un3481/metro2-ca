@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/un3481/sample-metro2-server/server"
+	"sample-metro2-server/server"
 )
 
 func Getenv(key, fallback string) string {

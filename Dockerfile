@@ -3,13 +3,13 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/un3481/sample-metro2-server
-WORKDIR /go/src/github.com/un3481/sample-metro2-server
+ADD . /go/src/sample-metro2-server
+WORKDIR /go/src/sample-metro2-server
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/un3481/sample-metro2-server
+RUN go install sample-metro2-server
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/sample-metro2-server
