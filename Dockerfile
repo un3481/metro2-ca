@@ -2,6 +2,8 @@
 # and a workspace (GOPATH) configured at /go.
 FROM golang
 
+ENV NO_CACHE=HELLO_WORLD
+
 # Copy the local package files to the container's workspace.
 ADD . /go/src/github.com/un3481/sample-metro2-server
 
