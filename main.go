@@ -10,8 +10,15 @@ import (
 	"github.com/un3481/sample-metro2-server/server"
 )
 
+func Getenv(key, fallback string) string {
+    if value, ok := os.LookupEnv(key); ok {
+        return value
+    }
+    return fallback
+}
+
 func main() {
-	port := os.Getenv("PORT", "8080")
+	port := Getenv("PORT", "8080")
 	fmt.Fprintf(os.Stdout, "Starting web server on port %s\n\n", port)
 
 	timeout, _ := time.ParseDuration("30s")
