@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"/server"
+	"github.com/un3481/sample-metro2-server/server"
 )
 
 func main() {
