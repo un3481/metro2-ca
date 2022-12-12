@@ -1,2 +1,4 @@
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
 github.com/moov-io/metro2 v0.5.2 h1:l2bGJC4hbgx7lmNCzaulXbsKQ4mD+d4gTOLapn5HC/Q=
 github.com/moov-io/metro2 v0.5.2/go.mod h1:cJPSxuxhr8Tlxki2ehetpOTbIjF5cyGWtSL+AWIVSfI=
