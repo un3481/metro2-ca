@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("PORT") || "8080"
+	port := os.Getenv("PORT", "8080")
 	fmt.Fprintf(os.Stdout, "Starting web server on port %s\n\n", port)
 
 	timeout, _ := time.ParseDuration("30s")
