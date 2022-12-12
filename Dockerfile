@@ -8,7 +8,7 @@ COPY . /go/src/github.com/un3481/sample-metro2-server
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/un3481/sample-metro2-server@latest
+RUN go install github.com/un3481/sample-metro2-server
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/sample-metro2-server
