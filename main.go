@@ -31,8 +31,7 @@ func main() {
 	env, _ := os.LookupEnv("METRO2_ENV")
 	if env != "test" {
 		if err := serve.ListenAndServe(); err != nil {
-			return err
+			fmt.Fprintf(os.Stdout, "Could not start web server on port %s\n\n", port)
 		}
 	}
-	return nil
 }
