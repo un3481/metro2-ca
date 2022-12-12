@@ -3,7 +3,8 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-COPY . /go/src/github.com/un3481/sample-metro2-server
+ADD . /go/src/github.com/un3481/sample-metro2-server
+WORKDIR /go/src/github.com/un3481/sample-metro2-server
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
