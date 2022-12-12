@@ -2,7 +2,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"net/http"
 	"os"
@@ -12,9 +11,7 @@ import (
 )
 
 func main() {
-	port, ok := os.LookupEnv("PORT")
-	if !ok { port := "8080" }
-	
+	port := os.Getenv("PORT") || "8080"
 	fmt.Fprintf(os.Stdout, "Starting web server on port %s\n\n", port)
 
 	timeout, _ := time.ParseDuration("30s")
@@ -28,8 +25,7 @@ func main() {
 		IdleTimeout:       timeout,
 	}
 
-	env, _ := os.LookupEnv("METRO2_ENV")
-	if env != "test" {
+	if "test" != os.Getenv("ENV") {
 		if err := serve.ListenAndServe(); err != nil {
 			fmt.Fprintf(os.Stdout, "Could not start web server on port %s\n\n", port)
 		}
