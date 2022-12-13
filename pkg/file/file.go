@@ -14,7 +14,7 @@ import (
 	"encoding/binary"
 	"encoding/json"
 
-	"github.com/moov-io/base/log"
+	"github.com/un3481/metro2-ca/pkg/log"
 	"github.com/un3481/metro2-ca/pkg/lib"
 	"github.com/un3481/metro2-ca/pkg/utils"
 )
