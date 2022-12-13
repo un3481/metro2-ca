@@ -12,7 +12,7 @@ WORKDIR /go/src/github.com/un3481/metro2-ca
 RUN go install github.com/un3481/metro2-ca
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/metro2
+ENTRYPOINT /go/bin/metro2-ca
 
 # Document that the service listens on port 8080.
 EXPOSE 8080
