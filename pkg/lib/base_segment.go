@@ -826,6 +826,14 @@ func (r *BaseSegment) UnmarshalJSON(data []byte) error {
 // customized field validation functions
 // function name should be "Validate" + field name
 
+func (r *BaseSegment) ValidateCorrectionIndicator() error {
+	switch r.CorrectionIndicator {
+	case 0, 1:
+		return nil
+	}
+	return utils.NewErrInvalidValueOfField("correction indicator", "base segment")
+}
+
 func (r *BaseSegment) ValidateIdentificationNumber() error {
 	if validFilledString(r.IdentificationNumber) {
 		return utils.NewErrInvalidValueOfField("identification number", "base segment")
@@ -898,13 +906,13 @@ func (r *BaseSegment) ValidatePaymentHistoryProfile() error {
 	return nil
 }
 
-func (r *BaseSegment) ValidateInterestTypeIndicator() error {
-	switch r.InterestTypeIndicator {
-	case InterestIndicatorFixed, InterestIndicatorVariable, "":
-		return nil
-	}
-	return utils.NewErrInvalidValueOfField("interest type indicator", "base segment")
-}
+// func (r *BaseSegment) ValidateInterestTypeIndicator() error {
+// 	switch r.InterestTypeIndicator {
+// 	case InterestIndicatorFixed, InterestIndicatorVariable, "":
+// 		return nil
+// 	}
+// 	return utils.NewErrInvalidValueOfField("interest type indicator", "base segment")
+// }
 
 func (r *BaseSegment) ValidateTelephoneNumber() error {
 	if err := r.isPhoneNumber(r.TelephoneNumber, "base segment"); err != nil {
@@ -1251,6 +1259,14 @@ func (r *PackedBaseSegment) UnmarshalJSON(data []byte) error {
 // customized field validation functions
 // function name should be "Validate" + field name
 
+func (r *PackedBaseSegment) ValidateCorrectionIndicator() error {
+	switch r.CorrectionIndicator {
+	case 0, 1:
+		return nil
+	}
+	return utils.NewErrInvalidValueOfField("correction indicator", "packed base segment")
+}
+
 func (r *PackedBaseSegment) ValidateIdentificationNumber() error {
 	if validFilledString(r.IdentificationNumber) {
 		return utils.NewErrInvalidValueOfField("identification number", "packed base segment")
@@ -1323,13 +1339,13 @@ func (r *PackedBaseSegment) ValidatePaymentHistoryProfile() error {
 	return nil
 }
 
-func (r *PackedBaseSegment) ValidateInterestTypeIndicator() error {
-	switch r.InterestTypeIndicator {
-	case InterestIndicatorFixed, InterestIndicatorVariable, "":
-		return nil
-	}
-	return utils.NewErrInvalidValueOfField("interest type indicator", "packed base segment")
-}
+// func (r *PackedBaseSegment) ValidateInterestTypeIndicator() error {
+// 	switch r.InterestTypeIndicator {
+// 	case InterestIndicatorFixed, InterestIndicatorVariable, "":
+// 		return nil
+// 	}
+// 	return utils.NewErrInvalidValueOfField("interest type indicator", "packed base segment")
+// }
 
 func (r *PackedBaseSegment) ValidateTelephoneNumber() error {
 	if err := r.isPhoneNumber(r.TelephoneNumber, "packed base segment"); err != nil {

@@ -152,9 +152,9 @@ const (
 	//  status code that properly identifies the current condition of the account, "95"
 	AccountStatus95 = "95"
 	// designates the interest type, Fixed
-	InterestIndicatorFixed = "F"
+	// InterestIndicatorFixed = "F"
 	// designates the interest type, Variable/Adjustable
-	InterestIndicatorVariable = "V"
+	// InterestIndicatorVariable = "V"
 	// Consumer Account Number Change ONLY
 	ChangeIndicatorAccountNumber = 1
 	// Identification Number Change ONLY
