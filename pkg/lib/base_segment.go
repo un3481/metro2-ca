@@ -51,6 +51,18 @@ type BaseSegment struct {
 	// Format is MMDDYYYYHHMMSS for character date.
 	TimeStamp utils.Time `json:"timeStamp"`
 
+	// Used to replace the most recently reported update for the same reporting time period. Values available: 
+	//  0 = Not a replacement update (normal update) 
+	//  1 = Replacement update (correction) 
+	//
+	//  • Only records to be corrected should be reported with the “1” indicator.
+	//    Corrected data must be reported prior to next reporting period.
+	//  • Do not mix normal updates (value 0) with replacement updates (value 1) on the same media.
+	//  • Must receive corrected media prior to the next reporting period.
+	//  • The Date of Account Information must be equal to the previously-reported Date of
+	//    Account Information for matching purposes.
+	CorrectionIndicator int `json:"correctionIndicator"`
+
 	// Used to uniquely identify a data furnisher.
 	// Report your internal code to identify each branch, office, and/or credit central where information is verified.
 	// For accounts reported by servicers, the Identification Number should refer to the current holder of the note.
@@ -317,14 +329,23 @@ type BaseSegment struct {
 	// If the day is not available, use 01.
 	DateLastPayment utils.Time `json:"dateLastPayment,omitempty"`
 
-	// Contains one of the following values that designates the interest type:
-	//
-	//  F = Fixed
-	//  V = Variable/Adjustable
-	//
-	// If indicator not available or unknown, blank fill.
-	// Note: Report indicator ‘V’ for loans where the interest rate will be variable at some point, even if the interest rate starts as fixed.
-	InterestTypeIndicator string `json:"interestTypeIndicator"`
+	// If US Dollar report 998 and blank fill the remainder of the field.
+	// This will be reported with descriptive “US Dollar”.
+	CurrencyTypeCode string `json:"currencyTypeCode"`
+
+	// Used to indicate a new record, a new borrower or a change in consumer identification.  
+	// A value of 1 is used to report Rate 0 as a rating.  If account or borrower is not new, 
+	// or if no change in consumer information, this field should be blank filled. 
+	// Values available:
+	//  1 = New Account
+	//  2 = Name Change
+	//  3 = Address Change
+	//  5 = Social Insurance Number Change
+	//  6 = Name & Address Change
+	//  8 = Name & Social Insurance Number Change
+	//  9 = Address & Social Insurance Number Change
+	//  A = Name, Address, Social Insurance Change
+	ConsumerTransactionType int `json:"consumerTransactionType"`
 
 	// Report the last name of the primary consumer.
 	// Titles and prefixes should not be reported.

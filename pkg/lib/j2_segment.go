@@ -18,6 +18,13 @@ type J2Segment struct {
 	// Contains a constant of J2.
 	SegmentIdentifier string `json:"segmentIdentifier" validate:"required"`
 
+	// Used to indicate a new record, a new borrower or a change in consumer identification.  
+	// A value of 1 is used to report Rate 0 as a rating.  If account or borrower is not new, 
+	// or if no change in consumer information, this field should be blank filled. 
+	// If any other value is commonly used please advise Equifax so we can determine what
+	// special processing needs to be done.
+	ConsumerTransactionType string `json:"consumerTransactionType"`
+
 	// Report the last name of the associated consumer. Titles and prefixes should not be reported.
 	// If the surname contains multiple names, such as Paternal Name-Maternal Name, hyphenate the surnames.
 	// For example, “SMITH-JONES” or “MARTINEZ-REYES” requires the hyphen.
