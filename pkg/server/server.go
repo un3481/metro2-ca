@@ -9,8 +9,9 @@ import (
 	"net/http"
 	"strings"
 
+	"metro2-server/pkg/file"
+
 	"github.com/gorilla/mux"
-	"github.com/moov-io/metro2/pkg/file"
 	"github.com/moov-io/metro2/pkg/utils"
 )
 

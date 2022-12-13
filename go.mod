@@ -1,4 +1,4 @@
-module sample-metro2-server
+module metro2-server
 
 go 1.19
 

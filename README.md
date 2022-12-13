@@ -1,5 +1,5 @@
-# sample-metro2-server
-Http server using Metro 2 API
+# metro2-server
+HTTP server using Metro2 API
 
 ## run:
 ```
