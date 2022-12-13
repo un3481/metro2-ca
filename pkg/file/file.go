@@ -15,8 +15,8 @@ import (
 	"encoding/json"
 
 	"github.com/moov-io/base/log"
-	"github.com/moov-io/metro2/pkg/lib"
-	"github.com/moov-io/metro2/pkg/utils"
+	"github.com/un3481/metro2-ca/pkg/lib"
+	"github.com/un3481/metro2-ca/pkg/utils"
 )
 
 // General file interface

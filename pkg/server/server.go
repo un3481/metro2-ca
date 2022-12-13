@@ -1,3 +1,6 @@
+// Copyright 2020 The Moov Authors
+// Use of this source code is governed by an Apache License
+// license that can be found in the LICENSE file.
 
 package server
 
@@ -9,10 +12,9 @@ import (
 	"net/http"
 	"strings"
 
-	"metro2-server/pkg/file"
-
 	"github.com/gorilla/mux"
-	"github.com/moov-io/metro2/pkg/utils"
+	"github.com/un3481/metro2-ca/pkg/file"
+	"github.com/un3481/metro2-ca/pkg/utils"
 )
 
 func parseInputFromRequest(r *http.Request) (file.File, error) {

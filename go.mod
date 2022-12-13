@@ -1,4 +1,4 @@
-module metro2-server
+module github.com/un3481/metro2-ca
 
 go 1.19
 

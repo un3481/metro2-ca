@@ -16,8 +16,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/moov-io/metro2/pkg/lib"
-	"github.com/moov-io/metro2/pkg/utils"
+	"github.com/un3481/metro2-ca/pkg/lib"
+	"github.com/un3481/metro2-ca/pkg/utils"
 )
 
 func TestFile__Crashers(t *testing.T) {
