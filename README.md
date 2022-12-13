@@ -1,5 +1,5 @@
-# metro2-server
-HTTP server and Metro2 Canadian Credit Report API
+# metro2-ca
+Metro2 Canadian Credit Report API
 
 ## run:
 ```
