@@ -46,7 +46,7 @@ func (t *ServerTest) makeRequest(method, url, body string, c *check.C) (*httptes
 }
 
 func (t *ServerTest) getWriter(name string, c *check.C) (*multipart.Writer, *bytes.Buffer) {
-	path := filepath.Join("..", "test", "testdata", name)
+	path := filepath.Join("..", "..", "test", "testdata", name)
 	file, err := os.Open(path)
 	c.Assert(err, check.IsNil)
 	defer file.Close()
@@ -60,18 +60,18 @@ func (t *ServerTest) getWriter(name string, c *check.C) (*multipart.Writer, *byt
 }
 
 func (t *ServerTest) readFiles(f1 string, f2 string, c *check.C) ([]byte, []byte) {
-	p1 := filepath.Join("..", "test", "testdata", f1)
+	p1 := filepath.Join("..", "..", "test", "testdata", f1)
 	data1, err := os.ReadFile(p1)
 	c.Assert(err, check.IsNil)
 
-	p2 := filepath.Join("..", "test", "testdata", f2)
+	p2 := filepath.Join("..", "..", "test", "testdata", f2)
 	data2, err := os.ReadFile(p2)
 	c.Assert(err, check.IsNil)
 	return data1, data2
 }
 
 func (t *ServerTest) getErrWriter(name string, c *check.C) (*multipart.Writer, *bytes.Buffer) {
-	path := filepath.Join("..", "test", "testdata", name)
+	path := filepath.Join("..", "..", "test", "testdata", name)
 	file, err := os.Open(path)
 	c.Assert(err, check.IsNil)
 	defer file.Close()
