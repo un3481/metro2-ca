@@ -1,5 +1,5 @@
 # metro2-ca
-Metro2 Canadian Credit Report API
+Metro2 for Canadian Field Definitions
 
 ## run:
 ```
