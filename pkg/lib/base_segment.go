@@ -345,7 +345,7 @@ type BaseSegment struct {
 	//  8 = Name & Social Insurance Number Change
 	//  9 = Address & Social Insurance Number Change
 	//  A = Name, Address, Social Insurance Change
-	ConsumerTransactionType int `json:"consumerTransactionType"`
+	ConsumerTransactionType string `json:"consumerTransactionType"`
 
 	// Report the last name of the primary consumer.
 	// Titles and prefixes should not be reported.

@@ -19,6 +19,7 @@
         "recordDescriptorWord": 1004,
         "processingIndicator": 1,
         "timeStamp": "2020-01-01T01:11:22Z",
+        "correctionIndicator": 0,
         "identificationNumber": "6666666",
         "consumerAccountNumber": "553723456",
         "portfolioType": "M",
@@ -36,7 +37,8 @@
         "dateFirstDelinquency": "2001-07-19T00:00:00Z",
         "dateClosed": "2002-08-02T00:00:00Z",
         "dateLastPayment": "2002-08-02T00:00:00Z",
-        "interestTypeIndicator": "",
+        "currencyTypeCode": "998",
+        "consumerTransactionType":"",
         "surname": "SMITH-JONES",
         "firstName": "JUNIOR",
         "generationCode": "S",
@@ -56,6 +58,7 @@
       "j1": [
         {
           "segmentIdentifier": "J1",
+          "consumerTransactionType":"",
           "surname": "BEAUCHAMP",
           "firstName": "KEVIN",
           "generationCode": "S",
