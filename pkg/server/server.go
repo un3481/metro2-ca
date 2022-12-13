@@ -13,8 +13,8 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	"github.com/un3481/metro2-ca/pkg/file"
-	"github.com/un3481/metro2-ca/pkg/utils"
+	"metro2-ca/pkg/file"
+	"metro2-ca/pkg/utils"
 )
 
 func parseInputFromRequest(r *http.Request) (file.File, error) {

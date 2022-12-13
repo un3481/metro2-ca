@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/un3481/metro2-ca/pkg/utils"
+	"metro2-ca/pkg/utils"
 )
 
 type validator struct{}

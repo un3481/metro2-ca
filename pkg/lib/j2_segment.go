@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/un3481/metro2-ca/pkg/utils"
+	"metro2-ca/pkg/utils"
 )
 
 var _ Segment = (*J2Segment)(nil)

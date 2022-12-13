@@ -1,4 +1,4 @@
-module github.com/un3481/metro2-ca
+module metro2-ca
 
 go 1.19
 

@@ -14,9 +14,9 @@ import (
 	"encoding/binary"
 	"encoding/json"
 
-	"github.com/un3481/metro2-ca/pkg/log"
-	"github.com/un3481/metro2-ca/pkg/lib"
-	"github.com/un3481/metro2-ca/pkg/utils"
+	"metro2-ca/pkg/log"
+	"metro2-ca/pkg/lib"
+	"metro2-ca/pkg/utils"
 )
 
 // General file interface

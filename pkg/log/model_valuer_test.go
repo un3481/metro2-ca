@@ -3,7 +3,7 @@ package log_test
 import (
 	"testing"
 
-	"github.com/un3481/metro2-ca/pkg/log"
+	"metro2-ca/pkg/log"
 )
 
 type Item struct {

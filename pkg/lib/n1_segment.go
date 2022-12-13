@@ -1,7 +1,7 @@
 package lib
 
 import (
-	"github.com/un3481/metro2-ca/pkg/utils"
+	"metro2-ca/pkg/utils"
 	"reflect"
 	"strings"
 )

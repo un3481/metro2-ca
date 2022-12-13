@@ -11,7 +11,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 
-	lib "github.com/un3481/metro2-ca/pkg/log"
+	lib "metro2-ca/pkg/log"
 )
 
 func Test_LogImplementations(t *testing.T) {
