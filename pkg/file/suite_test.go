@@ -12,7 +12,7 @@ import (
 
 	"gopkg.in/check.v1"
 
-	"metro2-ca/pkg/utils"
+	"github.com/moov-io/metro2/pkg/utils"
 )
 
 func Test(t *testing.T) { check.TestingT(t) }

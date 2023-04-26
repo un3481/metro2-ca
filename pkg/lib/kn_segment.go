@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	"metro2-ca/pkg/utils"
+	"github.com/moov-io/metro2/pkg/utils"
 )
 
 var _ Segment = (*K1Segment)(nil)

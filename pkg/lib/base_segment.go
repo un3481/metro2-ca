@@ -12,7 +12,7 @@ import (
 	"strings"
 	"unicode"
 
-	"metro2-ca/pkg/utils"
+	"github.com/moov-io/metro2/pkg/utils"
 )
 
 var _ Record = (*BaseSegment)(nil)

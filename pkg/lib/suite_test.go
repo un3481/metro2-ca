@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"metro2-ca/pkg/utils"
+	"github.com/moov-io/metro2/pkg/utils"
 	"gopkg.in/check.v1"
 )
 

@@ -13,8 +13,9 @@ import (
 	"unicode"
 
 	"github.com/moov-io/base/log"
+	"github.com/moov-io/metro2/pkg/utils"
+	
 	"metro2-ca/pkg/lib"
-	"metro2-ca/pkg/utils"
 )
 
 var _ File = (*fileInstance)(nil)

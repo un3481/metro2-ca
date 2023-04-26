@@ -5,10 +5,11 @@
 package lib
 
 import (
-	"metro2-ca/pkg/utils"
 	"reflect"
 	"strings"
 	"unicode"
+
+	"github.com/moov-io/metro2/pkg/utils"
 )
 
 var _ Record = (*TrailerRecord)(nil)

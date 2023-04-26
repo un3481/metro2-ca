@@ -1,9 +1,10 @@
 package lib
 
 import (
-	"metro2-ca/pkg/utils"
 	"reflect"
 	"strings"
+
+	"github.com/moov-io/metro2/pkg/utils"
 )
 
 var _ Segment = (*N1Segment)(nil)
